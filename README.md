@@ -1,3 +1,4 @@
+[Open in Codeanywhere](https://demo.codeanywhere.com/workspace#https://github.com/Tpuljak/docker-jupyter-extensible)
 
 # Extensible Docker image for Jupyter Notebook/Lab
 
