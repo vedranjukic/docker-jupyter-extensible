@@ -3,7 +3,8 @@ services:
       build:
         context: .
       env:
-        - NB_UID: codeany
+        - name: NB_UID
+          value: codeany
       volumeMounts: []
       limits:
         cpu: 1
