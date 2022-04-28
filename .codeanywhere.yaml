@@ -1,0 +1,11 @@
+services:
+    - name: runtime
+      build:
+        context: .
+      env: []
+      volumeMounts: []
+      limits:
+        cpu: 1
+        memory: 8
+volumes: []
+tasks: []
