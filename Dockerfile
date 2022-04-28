@@ -24,7 +24,7 @@ RUN set -ex \
     && locale-gen en_US.UTF-8 pt_BR.UTF-8 \
     && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
-USER $NB_UID
+USER codeany
 
 # install Python packages you often use
 RUN set -ex \
@@ -40,10 +40,10 @@ RUN set -ex \
     && jupyter labextension install jupyterlab-plotly@5.4.0 --no-build \
     && jupyter lab build -y \
     && jupyter lab clean -y \
-    && rm -rf "/home/${NB_USER}/.cache/yarn" \
-    && rm -rf "/home/${NB_USER}/.node-gyp" \
+    && rm -rf "/home/codeany/.cache/yarn" \
+    && rm -rf "/home/codeany/.node-gyp" \
     && fix-permissions "${CONDA_DIR}" \
-    && fix-permissions "/home/${NB_USER}"
+    && fix-permissions "/home/codeany"
 
 # install other dependencies
 # 
