@@ -12,6 +12,6 @@ services:
 volumes: []
 tasks:
   - name: jupyter_config_copy
-    command: mkdir -p /home/codeany/.jupyter && cp /app/jupyter_notebook_config.py /home/codeany/.jupyter/jupyter_notebook_config.py
+    command: sleep 3s && mkdir -p /home/codeany/.jupyter && cp /app/jupyter_notebook_config.py /home/codeany/.jupyter/jupyter_notebook_config.py
     serviceName: runtime
     type: exec
