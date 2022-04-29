@@ -24,6 +24,8 @@ RUN set -ex \
     && locale-gen en_US.UTF-8 pt_BR.UTF-8 \
     && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
+RUN groupadd -r -g 9999 codeany && useradd -r -u 9999 -g 9999 -m -s /bin/bash codeany && adduser codeany sudo && echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
 USER codeany
 
 # install Python packages you often use
