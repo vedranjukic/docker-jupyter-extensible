@@ -2,9 +2,7 @@ services:
     - name: runtime
       build:
         context: .
-      env:
-        - name: NB_UID
-          value: codeany
+      env: []
       volumeMounts: []
       limits:
         cpu: 2
@@ -17,7 +15,7 @@ services:
         - name: PGADMIN_DEFAULT_PASSWORD
           value: pass
         - name: PGADMIN_LISTEN_PORT
-          value: 55400
+          value: "55400"
       volumeMounts: []
       limits:
         cpu: 2
