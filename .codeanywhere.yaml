@@ -9,6 +9,22 @@ services:
       limits:
         cpu: 2
         memory: 8
+    - name: pgadmin
+      image: dpage/pgadmin4
+      env: []
+      volumeMounts: []
+      limits:
+        cpu: 2
+        memory: 8
+    - name: db
+      image: postgres
+      env:
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
+      volumeMounts: []
+      limits:
+        cpu: 2
+        memory: 8
 volumes: []
 tasks:
   - name: jupyter_config_copy
