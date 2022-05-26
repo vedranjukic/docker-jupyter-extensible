@@ -11,7 +11,11 @@ services:
         memory: 8
     - name: pgadmin
       image: dpage/pgadmin4
-      env: []
+      env:
+        - name: PGADMIN_DEFAULT_EMAIL
+          value: admin@email.com
+        - name: PGADMIN_DEFAULT_PASSWORD
+          value: pass
       volumeMounts: []
       limits:
         cpu: 2
@@ -20,7 +24,7 @@ services:
       image: postgres
       env:
         - name: POSTGRES_PASSWORD
-          value: mysecretpassword
+          value: pass
       volumeMounts: []
       limits:
         cpu: 2
