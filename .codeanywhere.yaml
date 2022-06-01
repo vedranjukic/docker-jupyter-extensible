@@ -16,6 +16,8 @@ services:
           value: pass
         - name: PGADMIN_LISTEN_PORT
           value: "55400"
+        - name: PGADMIN_LISTEN_ADDRESS
+          value: "0.0.0.0"
       volumeMounts: []
       limits:
         cpu: 2
